@@ -1,0 +1,164 @@
+html {
+    scroll-behavior: smooth;
+}
+/* 1. Estilo para todo el cuerpo de la página */
+body {
+    background-color: #f0f2f5; /* Un gris muy claro de fondo */
+    font-family: Arial, sans-serif; /* Cambia la letra a una más moderna */
+    color: #333; /* Color del texto (gris oscuro, casi negro) */
+    line-height: 1.6; /* Da más espacio entre líneas para que sea fácil leer */
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Estilo para el encabezado (el menú) */
+header {
+    background-color: #2c3e50; /* Un azul marino elegante */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+}
+
+/* 3. Quitar los puntos de la lista y alinear el menú */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline; /* Hace que los elementos del menú estén uno al lado del otro */
+    margin: 0 15px;
+}
+
+/* 4. Estilo para los enlaces del menú */
+nav ul li a {
+    color: white;
+    text-decoration: none; /* Quita el subrayado de los links */
+    font-weight: bold;
+}
+
+/* 5. Un efecto cuando pasas el ratón por encima de los links */
+nav ul li a:hover {
+    color: #3498db; /* Cambia a un azul más claro */
+}
+
+/* 6. Estilo para las secciones de contenido */
+section {
+    padding: 20px;
+    max-width: 800px;
+    margin: 20px auto; /* Centra el contenido en la pantalla */
+    background-color: white;
+    border-radius: 8px; /* Redondea las esquinas */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Agrega una sombra suave */
+}
+
+/* Estilo para la foto de perfil */
+.foto-perfil {
+    width: 150px;       /* Definimos un ancho fijo */
+    height: 150px;      /* Definimos un alto fijo */
+    border-radius: 50%; /* Esto hace que la imagen sea un círculo perfecto */
+    object-fit: cover;  /* Evita que la foto se estire feo si no es cuadrada */
+    display: block;     /* Nos permite centrarla */
+    margin: 0 auto 20px auto; /* Centra la imagen y le da espacio abajo */
+    border: 3px solid #2c3e50; /* Le pone un borde del mismo azul del menú */
+}
+
+.lista-compañeros ul {
+    padding: 0;
+}
+
+.lista-compañeros li {
+    background-color: #f9f9f9;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-left: 5px solid #3498db; 
+    list-style: none;
+    border-radius: 4px;
+    transition: transform 0.2s; 
+}
+
+.lista-compañeros li:hover {
+    transform: translateX(10px); 
+    background-color: #eef7fe;
+}
+
+.lista-compañeros a {
+    text-decoration: none;
+    color: #2c3e50;
+    font-weight: bold;
+}
+
+/* Estilo para los botones de contacto */
+.redes {
+    display: flex;
+    gap: 15px; /* Espacio entre botones */
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.boton-contacto {
+    background-color: #3498db;
+    color: white !important; /* El !important asegura que el color sea blanco siempre */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.boton-contacto:hover {
+    background-color: #2980b9; /* Un azul más oscuro al pasar el mouse */
+}
+
+#contacto {
+    margin-bottom: 50px; /* Esto deja un espacio al final de la página */
+}
+
+/* Mejora para que las tarjetas de proyectos se vean más modernas */
+.tarjeta-proyecto {
+    border-top: 4px solid #2c3e50; /* Una barra superior que combine con tu menú */
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    transition: all 0.3s ease;
+}
+
+.tarjeta-proyecto:hover {
+    transform: translateY(-5px); /* Se eleva un poquito al pasar el mouse */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.tarjeta-proyecto h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+/* Estilo para la cabecera de presentación */
+.presentacion-cabecera {
+    text-align: center; /* Centra el nombre y la foto */
+    padding: 40px 0;
+    background-color: #f8f9fa; /* Un fondo sutil para diferenciar la bienvenida */
+    border-radius: 8px 8px 0 0; /* Redondea solo las esquinas de arriba */
+}
+
+.presentacion-cabecera h1 {
+    font-size: 2.5rem; /* Hace el nombre más grande */
+    color: #2c3e50;
+    margin-bottom: 20px;
+}
+
+/* Ajuste para la sección de contenido de abajo */
+.sobre-mi-contenido {
+    padding: 20px;
+}
+
+/* Mantenemos tu estilo de foto circular pero aseguramos que esté centrada */
+.foto-perfil {
+    width: 180px; /* La hice un poquito más grande para que resalte */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid white; /* Borde blanco para que resalte sobre el fondo gris */
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
