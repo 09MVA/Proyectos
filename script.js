@@ -1,23 +1,30 @@
 const btnLike = document.getElementById('btn-like');
 const contador = document.getElementById('contador-likes');
 
-let baseLikes = 0; 
-let dioLike = localStorage.getItem('usuarioDioLike') === 'true';
+// Esta es la dirección del servidor gratuito donde se guardará tu conteo
+const namespace = "milton-pavel-ucsp-2026";
+const key = "likes-totales";
 
-function actualizarVista() {
-    if (dioLike) {
-        btnLike.classList.add('activo');
-        contador.innerText = baseLikes + 1;
-    } else {
-        btnLike.classList.remove('activo');
-        contador.innerText = baseLikes;
-    }
+// Función para leer los likes de internet
+async function cargarLikes() {
+    try {
+        const resp = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
+        const data = await resp.json();
+        contador.innerText = data.value;
+    } catch (e) { contador.innerText = "2"; }
 }
 
-actualizarVista();
+cargarLikes();
 
-btnLike.addEventListener('click', () => {
-    dioLike = !dioLike;
-    localStorage.setItem('usuarioDioLike', dioLike);
-    actualizarVista();
+btnLike.addEventListener('click', async () => {
+    // Si el usuario no ha dado like en esta sesión
+    if (!btnLike.classList.contains('activo')) {
+        try {
+            // Esta línea le dice al servidor de internet: "Súmale 1"
+            const resp = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
+            const data = await resp.json();
+            contador.innerText = data.value;
+            btnLike.classList.add('activo');
+        } catch (e) { alert("Error de conexión"); }
+    }
 });

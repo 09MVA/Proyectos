@@ -190,8 +190,8 @@ nav ul li a:hover { color: #3498db; }
 
 .contenedor-like {
     position: absolute;
-    bottom: 15px; 
-    right: 20px;   
+    bottom: 15px;
+    right: 20px;
 }
 
 .boton-like {
@@ -206,16 +206,23 @@ nav ul li a:hover { color: #3498db; }
     font-weight: bold;
     color: #3498db;
     transition: all 0.3s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
 .boton-like.activo {
     background-color: #3498db;
     color: white !important;
     transform: scale(1.1);
+    cursor: default;
 }
 
-.boton-like:hover {
+.boton-like:hover:not(.activo) {
     transform: scale(1.05);
     box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+}
+
+.texto-like {
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 5px;
+    text-align: center;
 }
