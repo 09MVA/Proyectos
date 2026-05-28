@@ -1,30 +1,23 @@
 const btnLike = document.getElementById('btn-like');
 const contador = document.getElementById('contador-likes');
 
-// Esta es la dirección del servidor gratuito donde se guardará tu conteo
-const namespace = "milton-pavel-ucsp-2026";
-const key = "likes-totales";
+// 1. Al cargar, buscamos si ya había likes guardados. 
+// Si no hay nada, empezamos en 0.
+let likesGuardados = localStorage.getItem('misLikesTotales');
+let likes = likesGuardados ? parseInt(likesGuardados) : 0;
 
-// Función para leer los likes de internet
-async function cargarLikes() {
-    try {
-        const resp = await fetch(`https://api.countapi.xyz/get/${namespace}/${key}`);
-        const data = await resp.json();
-        contador.innerText = data.value;
-    } catch (e) { contador.innerText = "2"; }
-}
+// Mostramos los likes que recuperamos de la memoria
+contador.innerText = likes;
 
-cargarLikes();
-
-btnLike.addEventListener('click', async () => {
-    // Si el usuario no ha dado like en esta sesión
-    if (!btnLike.classList.contains('activo')) {
-        try {
-            // Esta línea le dice al servidor de internet: "Súmale 1"
-            const resp = await fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`);
-            const data = await resp.json();
-            contador.innerText = data.value;
-            btnLike.classList.add('activo');
-        } catch (e) { alert("Error de conexión"); }
-    }
+// 2. Escuchamos el clic
+btnLike.addEventListener('click', () => {
+    likes++; // Aumentamos
+    contador.innerText = likes; // Actualizamos la pantalla
+    
+    // 3. ¡LA CLAVE! Guardamos el nuevo número en la memoria del navegador
+    localStorage.setItem('misLikesTotales', likes);
+    
+    // Animación visual
+    btnLike.classList.toggle('activo');
+    console.log("Like guardado en memoria: " + likes);
 });
