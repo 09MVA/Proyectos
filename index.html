@@ -12,6 +12,7 @@
         <nav>
             <ul>
                 <li><a href="#sobre-mi">Sobre mí</a></li>
+                <li><a href="#profesores">Cursos y Profesores</a></li>
                 <li><a href="#contacto">Contacto</a></li>
                 <li><a href="#proyectos">Proyectos</a></li>
                 <li><a href="#relaciones-web">Relaciones Web</a></li> 
@@ -22,18 +23,87 @@
     <main>
         <section id="sobre-mi">
             <div class="presentacion-cabecera">
-            <h1>Hola, soy Milton Pavel Vilca Asqui </h1>
-            <img src="yo.jpg" alt="Foto de perfil" class="foto-perfil">
-            </div>
+                <h1>Hola, soy Milton Pavel Vilca Asqui</h1>
+                <img src="yo.jpg" alt="Foto de perfil" class="foto-perfil">
 
+                <div class="contenedor-like">
+                    <button id="btn-like" class="boton-like">
+                        <span class="icono-pulgar">👍</span>
+                        <span id="contador-likes">0</span>
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <section id="sobre-mi-contenido">
+
+        <section id="sobre-mi">
             <h2>Sobre mi</h2>
-            <p>Hola, actualmente soy estudiante en la 
-                <a href="https://ucsp.edu.pe/" target="_blank">Universidad Católica San Pablo</a>. 
-            </p>
-            <p>Actualmente estoy llevando el curso de <strong>Introduccion a la computacion</strong>.</p>
+            <p>Soy un apasionado de la tecnología enfocado en la Ciencia de la Computación. Mi objetivo es construir software eficiente y escalable, combinando la rigurosidad de los algoritmos en C++ con la versatilidad del desarrollo web moderno.</p>
+
+                <div class="cv-detalles">
+                    <h3>Formación Académica</h3>
+                    <ul>
+                        <li><strong>Pregrado:</strong> Carrera - Ciencia de la Computación <a href="https://ucsp.edu.pe/" target="_blank"> Universidad Catolica San Pablo</a>.</li>
+                        <li><strong>Educación Secundaria:</strong> Egresado de la <a href="https://www.facebook.com/IEDeanValdiviaOficial" target="_blank">I.E. Dean Valdivia</a></li>
+                    </ul>
+
+                    <h3>Áreas de Interés</h3> <ul>
+                        <li>Desarrollo de Software (C++, Python)</li>
+                        <li>Arquitectura de Sistemas y Algoritmos</li>
+                        <li>Desarrollo de Videojuegos (Unreal Engine, Godot)</li>
+                        <li>Desarrollo Front-end (HTML, CSS, JavaScript)</li>
+                    </ul>
+                </div>
+        </section>
+
+        <section id="profesores">
+            <h2>Plana Docente</h2>
+            <p>Cursos de segundo semestre </p>
+    
+            <div class="lista-profesores">
+                <article class="tarjeta-profesor">
+                    <div class="info-profe">
+                        <h3>Dr. Ernesto Cuadros Vargas</h3>
+                        <p>Curso: Introducción a la Computación</p>
+                    </div>
+                <a href="https://www.linkedin.com/in/ecuadrosv/" target="_blank" class="linkedin-profe">LinkedIn</a>
+            </article>
+
+            <article class="tarjeta-profesor">
+                <div class="info-profe">
+                <h3>Dr. Dugan Paul Nina Ortiz</h3>
+                <p>Curso: Calculo Diferencial e Integral I</p>
+                </div>
+                <a href="https://www.linkedin.com/in/dugan-paul-nina-ortiz-ab875774/" target="_blank" class="linkedin-profe">LinkedIn</a>
+            </article>
+
+            
+            <article class="tarjeta-profesor">
+            <div class="info-profe">
+                <h3>Dr. Erick Mauricio Gomez Nieto</h3>
+                <p>Curso: Programacion Orientada a Objetos</p>
+                </div>
+                <a href="https://www.linkedin.com/in/erick-gomez-nieto-24210130/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+
+            
+            <article class="tarjeta-profesor">
+            <div class="info-profe">
+                <h3>Mg. Kristel Gisselle Loayza Cruz</h3>
+                <p>Curso: Logica</p>
+                </div>
+                <a href="https://www.linkedin.com/in/kristel-gisselle-loayza-cruz-abb3b039b/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+            
+
+            <article class="tarjeta-profesor">
+            <div class="info-profe">
+                <h3>Dra. Rosmery Violeta Quispe Zavala</h3>
+                <p>Curso: Estructuras discretas II</p>
+                </div>
+                <a href="https://www.linkedin.com/in/rosmery-violeta-quispe-zavala-58374638/" target="_blank" class="linkedin-profe">LinkedIn</a>
+                </article>
+            
             </div>
         </section>
 
@@ -59,21 +129,32 @@
 
         <section id="relaciones-web">
             <h2>Relaciones Web</h2>
-                <p>Estos son los sitios web de mis compañeros de clase. ¡Te invito a explorarlos!</p>
-    
-            <div class="lista-compañeros">
-                <ul>
-                    <li><a href="https://ugovh.github.io/Ivan-Perales-Marroquin/" target="_blank">Página de Ivan Perales</a></li>
-                    <li><a href="URL_DE_TU_AMIGO_2" target="_blank">Página de Flor </a></li>
-                    <li><a href="https://cdnglm.github.io/" target="_blank">Página de Ismael Diaz</a></li>
-                </ul>
+            <p>Estos son los sitios web de mis compañeros de clase. ¡Te invito a explorarlos!</p>
+            
+            <div class="contenedor-cards-compañeros">
+                <a href="https://ugovh.github.io/Ivan-Perales-Marroquin/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Ivan Perales</span>
+                </a>
+
+                <a href="URL_DE_FLOR" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Flor</span>
+                </a>
+
+                <a href="https://cdnglm.github.io/" target="_blank" class="card-compañero">
+                    <div class="barra-lateral"></div>
+                    <span>Página de Ismael Diaz</span>
+                </a>
             </div>
         </section>
-    </main>
 
     <footer>
-        <p>&copy; 2026 - Creado por mí</p>
+
+<p>&copy; 2026 - Creado por mí</p>
     </footer>
+
+    <script src="script.js"></script>
 
 </body>
 </html>
