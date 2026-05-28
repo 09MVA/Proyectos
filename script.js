@@ -16,14 +16,18 @@ if (yaDioLike) {
 
 btnLike.addEventListener('click', () => {
     if (!yaDioLike) {
+     
         totalLikes++;
         yaDioLike = true;
         btnLike.classList.add('activo');
     } else {
+        
+        totalLikes--;
         yaDioLike = false;
         btnLike.classList.remove('activo');
     }
 
+    
     contador.innerText = totalLikes;
     localStorage.setItem('contador_likes', totalLikes);
     localStorage.setItem('dio_like', yaDioLike);
